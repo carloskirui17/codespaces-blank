@@ -19,6 +19,8 @@ btns.forEach(btn => {
             answer = eval(input.textContent);
             output.textContent = answer;
             input.textContent = 0;
+        } else {
+            alert("invalid input")
         }
 
         if(btn.classList.contains('clear')){

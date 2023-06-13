@@ -2,21 +2,26 @@ const ul = document.querySelector('.ul');
 const addBtn = document.getElementById('add_todo');
 const input = document.querySelectorAll('input');
 
-let li = document.createElement('li');
-let xBtn = document.createElement('button');
 
 addBtn.addEventListener('click', () => {
+
     let todo = input[0].value;
-    xBtn.classList.add('delete');
-    xBtn.textContent = "X";
+    let li = document.createElement('li');
     li.textContent = todo;
     ul.appendChild(li);
-    li.appendChild(xBtn);
     input[0].value = "";
-})
 
+    li.addEventListener('click', () => {
+        if (li.classList.contains('completed')) {
+            li.classList.remove('completed');
+        }
+        else {
+            li.classList.add('completed');
+        }
+    })
 
+    li.addEventListener('dblclick', () => {
+        li.remove()
+    })
 
-xBtn.addEventListener('click', (e) => {
-    e.target.parentElement.remove();
 })

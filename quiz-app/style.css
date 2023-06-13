@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+div {
+    height: 100px;
+    width: 100px;
+}
+
+
+#element {
+    background-image: url('imgs/gear.svg');
+    margin-top: 5vh;
+    transition: 1s;
+    transition-duration: 1s;
+    animation: changeImg;
+}
+
+#element:hover {
+    transition-duration: 1s;
+}
+
+@keyframes changeImg{
+
+    from{
+        background-image: url('img/svg2.svg');
+    }
+    to{
+        background-image: url('img/svg3.svg');
+    }
+}

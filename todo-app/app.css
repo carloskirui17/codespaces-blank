@@ -5,7 +5,7 @@
     font-weight: bold;
 }
 
-.delete {
-    background-color: red;
-    
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
